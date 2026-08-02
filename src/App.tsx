@@ -21,7 +21,7 @@ function App() {
   if (loading) return <div style={{ background: '#05060F', minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff' }}>جاري التحميل...</div>;
 
   return (
-    <Router basename="/magazine-al-tayf/">
+    <Router>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/article/:id" element={<Article />} />
