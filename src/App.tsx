@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import { auth } from './lib/firebase';
-import Home from './pages/Home';
-import Article from './pages/Article';
-import Dashboard from './pages/Dashboard';
-import Login from './pages/Login';
+import { auth } from './firebase';
+import Home from './Home';
+import Article from './Article';
+import Dashboard from './Dashboard';
+import Login from './Login';
 
 function App() {
   const [user, setUser] = useState(null);
