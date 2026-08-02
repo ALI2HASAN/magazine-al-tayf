@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '../lib/firebase';
+import { auth } from './firebase';
 
 const COLORS = {
   void: "#05060F",
@@ -66,7 +66,7 @@ export default function Login() {
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              style={{ width: "100%", padding: "12px", background: "rgba(255,255,255,0.05)", border: `1px solid ${COLORS.panelBorder}`, borderRadius: "8px", color: COLORS.text", fontSize: "14px", fontFamily: "inherit" }}
+              style={{ width: "100%", padding: "12px", background: "rgba(255,255,255,0.05)", border: `1px solid ${COLORS.panelBorder}`, borderRadius: "8px", color: COLORS.text, fontSize: "14px", fontFamily: "inherit" }}
               required
             />
           </div>
