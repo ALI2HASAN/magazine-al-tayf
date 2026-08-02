@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { collection, query, where, getDocs, addDoc, updateDoc, deleteDoc, doc } from 'firebase/firestore';
 import { signOut } from 'firebase/auth';
-import { db, auth } from '../lib/firebase';
+import { db, auth } from './firebase';
 
 const COLORS = {
   void: "#05060F",
