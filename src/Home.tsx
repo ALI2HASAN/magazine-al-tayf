@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { collection, query, orderBy, getDocs } from 'firebase/firestore';
-import { db, auth } from '../lib/firebase';
+import { db, auth } from './firebase';
 
 const FONTS = `
 @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Almarai:wght@400;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
@@ -155,7 +155,7 @@ export default function Home() {
         <section style={{ padding: "0 56px 80px" }}>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "20px", maxWidth: "1000px" }}>
             {visible.map((a, i) => {
-              const [ref, inView] = useInView();
+              const [ref, inView] = useInView() as [any, boolean];
               const cat = getCat(a.category);
               return (
                 <Link key={a.id} to={`/article/${a.id}`} style={{ textDecoration: "none", color: "inherit" }}>
